@@ -7,7 +7,7 @@ module.exports = {
 	],
 	theme: {
 		fontFamily: {
-			sans: ['var(--font-Satochi)', "sans-serif"],
+			sans: ["var(--font-Satochi)", "sans-serif"],
 		},
 		fontSize: {
 			xs: "1.2rem",
@@ -46,6 +46,28 @@ module.exports = {
 			"radial-faded": "",
 			"glass-gradient":
 				"linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+		},
+		keyframes: {
+			fadeOutUp: {
+				"0%": {
+					opacity: "1",
+					transform: "translateY(0)",
+				},
+				"100%": {
+					opacity: "0",
+					transform: "translateY(-10px)",
+				},
+			},
+			fadeInDown: {
+				"0%": {
+					opacity: "0",
+					transform: "translateY(-10px)",
+				},
+				"100%": {
+					opacity: "1",
+					transform: "translateY(0)",
+				},
+			},
 		},
 	},
 	plugins: [],
