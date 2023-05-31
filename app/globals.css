@@ -27,6 +27,9 @@
         @apply bg-background text-white;
        
     }
+    li{
+        list-style: none;
+    }
 }
 
 .logo {

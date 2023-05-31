@@ -112,10 +112,10 @@ const ProjectCard:React.FC<ProjectCardProps>  = ({ img, title, link, video, avai
 			)}
 
 			<div className="text-[14px] flex gap-2">
-				<h1>
-					Designed By {creator}
+				<h1 className={`${available ? "block" : "hidden"} md:hidden`}>
+					<span className="font-bold">{title} </span>by {creator}
 				</h1>
-				
+
 				<p className={`${available ? "hidden" : "block"} text-[#7f7f7f]`}>
 					Unavailable
 				</p>

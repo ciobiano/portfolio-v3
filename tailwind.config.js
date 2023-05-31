@@ -6,12 +6,14 @@ module.exports = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+
+		extend: {
 		fontFamily: {
 			sans: ["var(--font-Satochi)", "sans-serif"],
 		},
 		fontSize: {
-			xs: "1.2rem",
-			sm: "1.4rem",
+			xs: "1rem",
+			sm: "1.2rem",
 			md: "1.6rem",
 			lg: "1.8rem",
 			xl: ["2.2rem", "1.3"],
@@ -27,8 +29,10 @@ module.exports = {
 			transparent: "transparent",
 			white: "#fff",
 			"off-white": "#f7f8f8",
-			"transparent-white": "rgba(255, 255, 255, 0.08)",
 			background: "#000000",
+			"transparent-white": "rgba(255, 255, 255, 0.05)",
+			
+			"transparent-black": " rgba(0, 0, 0, 0.8)",
 			grey: "#858699",
 			"grey-dark": "#222326",
 			"primary-text": "#b4bcd0",
@@ -69,6 +73,7 @@ module.exports = {
 				},
 			},
 		},
+	},
 	},
 	plugins: [],
 };

@@ -2,8 +2,11 @@ import Navbar from "./components/navbar/Navbar";
 
 import { Container } from "./components/utils/container";
 
-import { HeroPage } from "./components/sections/heroSection/HeroPage";
-import { ProjectPage } from "./components/sections/projectSection/ProjectPage";
+import { HeroPage } from "./components/sections/hero/HeroPage";
+import { ProjectPage } from "./components/sections/project/ProjectPage";
+import About from "./components/sections/about/About";
+import { SongBox } from "./components/sections/song/SongSlide";
+
 
 export default function Home() {
 	return (
@@ -11,10 +14,11 @@ export default function Home() {
 			<main>
 				<Container>
 					<HeroPage />
-				</Container>
-				<Container>
 					<ProjectPage/>
+					<About/>
+					<SongBox/>
 				</Container>
+				
 			</main>
 		</div>
 	);

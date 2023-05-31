@@ -19,8 +19,13 @@ const buttonClasses = cva(
 				primary: "bg-white ",
 				secondary: [
 					"text-off-white bg-white bg-opacity-10 border border-transparent-white backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in md:w-[fit-content]",
-					,
+					
+
+					
 				],
+				tertiary: "bg-transparent border border-white",
+				
+				
 				
 			},
 

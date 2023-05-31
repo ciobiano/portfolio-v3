@@ -39,7 +39,7 @@ function Navbar() {
 		}, [setIsMenuOpen]);
 
 	return (
-		<header className="fixed top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[12px]">
+		<header className="fixed bg-transparent-black top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[10px]  z-10">
 			<Container className="flex h-[var(--nav-height)] justify-between">
 				<Link
 					className="items-center font-sans font-bold gap-1 text-xs flex md:w-7/12 
