@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/sections/footer/Footer";
 import { Container } from "./components/utils/container";
 import "./globals.css";
 import localFont from "next/font/local";
@@ -45,14 +46,14 @@ export default function RootLayout({
 			</head>
 
 			<body className={Satochi.className}>
-				<div>
+				<div >
 					<Navbar />
-					<main className=" pt-[var(--nav-height)]">
+					<main className="bg-hero-gradient pt-[var(--nav-height)]">
 						{children}
 					</main>
 					<footer>
 						<Container>
-							<div>footer</div>
+							<Footer/>
 						</Container>
 					</footer>
 				</div>

@@ -1,30 +1,44 @@
 "use client";
 
-import Image from "next/image";
-
+import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import { songs } from "../../data/song";
-import SongCard from "./SongCard";
+import SongCard, { SongProps } from "./SongCard";
+import { authenticateSpotify, fetchSongs } from "@/app/data/song";
 
-export const SongBox = () => {
-	
+const SongBox: React.FC = () => {
+	const [songs, setSongs] = useState<SongProps[]>([]);
+
+	useEffect(() => {
+		const playlistUrl =
+			"https://open.spotify.com/playlist/1dsHW66O2AJ2pDS68q58A1?si=7866048a8b9f4c50";
+
+		authenticateSpotify().then((authenticated) => {
+			if (authenticated) {
+				fetchSongs(playlistUrl).then((tracks) => {
+					if (tracks) {
+						setSongs(tracks);
+					}
+				});
+			}
+		});
+	}, []);
 
 	return (
-		<div className="container mx-auto mt-14 ">
-			<h1 className="text-md font-bold mb-4">
-				Love alittle enterainment ? <br />{" "}
-				<span className="text-xs text-grey">
-					I recommend you give these a try.
-				</span>
+		<div className="container mx-auto z-10 mt-[-350px]">
+			<h1 className="mb-4 text-md md:mb-7 md:text-xl justify-center items-center text-center text-gradient">
+				Love a little entertainment? <br />
 			</h1>
-			<div className=" justify-around    lg:my-[1rem] ">
-				<Marquee pauseOnHover={true} className="gap-4  ">
+			<p className="text-xs text-center text-gradient">
+				Some cool tunes for your ears.
+			</p>
+			<div className="justify-around lg:my-[4rem]">
+				<Marquee pauseOnHover={true} className="gap-4">
 					{songs.map((song, index) => (
 						<SongCard
 							key={index}
 							title={song.title}
 							artist={song.artist}
-							image={song.img}
+							image={song.image}
 							link={song.link}
 						/>
 					))}
@@ -33,3 +47,5 @@ export const SongBox = () => {
 		</div>
 	);
 };
+
+export default SongBox;

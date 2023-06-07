@@ -29,7 +29,7 @@ export const HeroSubtitle = ({ children, className }: HeroElementProps) => {
 	return (
 		<h2
 			className={classNames(
-				" text-xs md:max-w-[30rem] text-white md:text-sm",
+				" text-sm font-semibold md:max-w-[35rem] text-gradient md:text-md",
 				className
 			)}
 		>
@@ -40,7 +40,7 @@ export const HeroSubtitle = ({ children, className }: HeroElementProps) => {
 
 export const Hero = ({ children }: HeroProps) => {
 	return (
-		<div className=" relative text-start h-[50vh] md:min-w-[450px] md:justify-end justify-center gap-8 flex flex-col flex-nowrap">
+		<div className=" relative text-start h-[55vh] md:min-w-[450px] md:justify-end justify-center gap-10 flex flex-col flex-nowrap">
 			{children}
 		</div>
 	);

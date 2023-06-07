@@ -4,15 +4,15 @@ import { BsArrowRightShort } from 'react-icons/bs'
 
 type Props = {}
 
-export const lastestBlog = (props: Props) => {
+export const LastestBlog = (props: Props) => {
   return (
-		<section className="mx-auto max-w-6xl w-full py-32 px-5 md:px-0">
+		<section className="mx-auto  py-32 ">
 			<header className="flex flex-col gap-y-5 sm:flex-row md:items-center justify-between">
-				<h2 className="font-poppins font-bold text-5xl md:text-6xl relative max-w-fit">
+				<h2 className="font-bold text-xl md:text-5xl relative max-w-fit text-gradient">
 					Latest blog posts
 				</h2>
 
-				<Link className="max-w-fit" href="#">
+				<Link className="max-w-fit inline-flex" href="#">
 					Browse all blog posts
 					<BsArrowRightShort width={25} height={25} />
 				</Link>
@@ -28,11 +28,11 @@ export const lastestBlog = (props: Props) => {
 							
 							href=''
                             	>
-							<h3 className="font-semibold font-poppins text-xl md:text-2xl transition-colors border-accent/10 group-hover:border-b-accent border-b-2 max-w-fit">
+							<h3 className="font-semibold  text-xs md:text-sm transition-colors border-grey group-hover:border-b-grey border-b-2 max-w-fit">
 							 The return of the great Alex Smith  
 							</h3>
 
-							<p className="mt-1 md:mt-2 text-base md:text-lg text-gray-light max-w-xl font-inter">
+							<p className="mt-1 md:mt-2 text-base md:text-sm text-grey max-w-xl ">
 								We are excited to announce that Alex Smith will be returning to the team as a senior developer. Alex has been working with us for over 5 years and has been a key part of our success.
 							</p>
 						</Link>

@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import { Work } from "../../data/work";
+import { Work } from "../../../data/work";
 import { BriefcaseIcon } from "../../icons/BriefcaseIcon";
 
 export const Resume = () => {
 	return (
-		<div className="max-w-[420px] rounded-2xl border p-6 border-zinc-700/40">
+		<div className="max-w-[420px] rounded-2xl border p-6 border-zinc-700/40 bg-transparent-white">
 			<h2 className="flex text-sm font-semibold ">
 				<BriefcaseIcon className="h-6 w-6 flex-none" />
 				<span className="ml-3">Work</span>

@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ["images.unsplash.com", "framerusercontent.com", "t2.genius.com"],
+		domains: ["images.unsplash.com", "framerusercontent.com", "i.scdn.co"],
 	},
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

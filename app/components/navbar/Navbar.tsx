@@ -1,15 +1,14 @@
 "use client";
 
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { MdOutlineFileDownload } from "react-icons/md";
 import { FaBullseye } from "react-icons/fa";
-
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Button from "../utils/Button";
-
+import { Button } from "../utils/Button";
 import { Container } from "../utils/container";
 import Hamburger from "hamburger-react";
 import classNames from "classnames";
+import { motion } from 'framer-motion';
 
 function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,28 +17,29 @@ function Navbar() {
 		setIsMenuOpen(!isMenuOpen);
 	};
 
-	 useEffect(() => {
-			const html = document.querySelector("html");
-			if (html) html.classList.toggle("overflow-hidden", isMenuOpen);
-		}, [isMenuOpen]);
+	useEffect(() => {
+		const html = document.querySelector("html");
+		if (html) html.classList.toggle("overflow-hidden", isMenuOpen);
+	}, [isMenuOpen]);
 
-		useEffect(() => {
-			const closeHamburgerNavigation = () => setIsMenuOpen(false);
+	useEffect(() => {
+		const closeHamburgerNavigation = () => setIsMenuOpen(false);
 
-			window.addEventListener("orientationchange", closeHamburgerNavigation);
-			window.addEventListener("resize", closeHamburgerNavigation);
+		window.addEventListener("orientationchange", closeHamburgerNavigation);
+		window.addEventListener("resize", closeHamburgerNavigation);
 
-			return () => {
-				window.removeEventListener(
-					"orientationchange",
-					closeHamburgerNavigation
-				);
-				window.removeEventListener("resize", closeHamburgerNavigation);
-			};
-		}, [setIsMenuOpen]);
+		return () => {
+			window.removeEventListener("orientationchange", closeHamburgerNavigation);
+			window.removeEventListener("resize", closeHamburgerNavigation);
+		};
+	}, [setIsMenuOpen]);
 
 	return (
-		<header className="fixed bg-transparent-black top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[10px]  z-10">
+		<motion.header 
+		animate={{y: 0, opacity: 1}}
+		initial={{y: -1, opacity: 0}}
+		transition={{ease: "easeOut", delay: 0}}
+		className="fixed bg-transparent-black top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[10px]  z-10">
 			<Container className="flex h-[var(--nav-height)] justify-between">
 				<Link
 					className="items-center font-sans font-bold gap-1 text-xs flex md:w-7/12 
@@ -85,7 +85,7 @@ function Navbar() {
 
 				<div className="items-center text-center md:flex hidden ">
 					<Button href="#" variant="primary" size="small">
-						Contact <BsFillArrowRightCircleFill size={20} />
+						Resumé <MdOutlineFileDownload size={20} />
 					</Button>
 				</div>
 
@@ -94,7 +94,7 @@ function Navbar() {
 					<span className="sr-only">Toggle menu</span>
 				</div>
 			</Container>
-		</header>
+		</motion.header>
 	);
 }
 
