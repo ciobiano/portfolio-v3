@@ -24,14 +24,14 @@ const SongBox: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="container mx-auto z-10 mt-[-350px]">
+		<div className="container mx-auto z-10 mt-[-10px]">
 			<h1 className="mb-4 text-md md:mb-7 md:text-xl justify-center items-center text-center text-gradient">
 				Love a little entertainment? <br />
 			</h1>
 			<p className="text-xs text-center text-gradient">
 				Some cool tunes for your ears.
 			</p>
-			<div className="justify-around lg:my-[4rem]">
+			<div className="justify-around lg:my-[5rem]">
 				<Marquee pauseOnHover={true} className="gap-4">
 					{songs.map((song, index) => (
 						<SongCard

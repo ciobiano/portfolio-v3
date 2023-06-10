@@ -21,7 +21,7 @@ export default function Home() {
 					<About />
 					<div
 						className={classNames(
-							"mask-radial-faded pointer-events-none relative z-[-1] my-[-12.8rem] h-[60rem] overflow-hidden",
+							"mask-radial-faded pointer-events-none relative z-[-1] my-[-12.8rem] h-[40rem] overflow-hidden",
 							"[--color:#7F7F7F] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]",
 							"after:absolute after:top-1/2 after:-left-1/2 after:h-[142.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(202,202,202,0.39)] after:bg-background"
 						)}
