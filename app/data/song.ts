@@ -1,8 +1,10 @@
 import SpotifyWebApi from "spotify-web-api-js";
 
+
 const spotifyApi = new SpotifyWebApi();
-const clientId = process.env.SPOTIFY_API_ID; ;
-const clientSecret =process.env.SPOTIFY_API_SECRET ;
+const clientId = process.env.SPOTIFY_CLIENT_ID || "";
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET || "";
+
 
 export const authenticateSpotify = async () => {
 	try {
@@ -13,7 +15,10 @@ export const authenticateSpotify = async () => {
 				Authorization: `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
 			},
 			body: "grant_type=client_credentials",
-		});
+		}
+		
+		);
+		console.log(`Basic ${btoa(`${clientId}:${clientSecret}`)}`);
 
 		const data = await response.json();
 
@@ -45,7 +50,6 @@ export const fetchSongs = async (playlistUrl: string) => {
 	}
 };
 
-
 const extractPlaylistIdFromUrl = (url: string) => {
 	const regex = /playlist\/([a-zA-Z0-9]+)/;
 	const match = url.match(regex);
@@ -54,4 +58,3 @@ const extractPlaylistIdFromUrl = (url: string) => {
 	}
 	throw new Error("Invalid playlist URL");
 };
-

@@ -32,7 +32,7 @@ module.exports = {
 				"transparent-white": "rgba(255, 255, 255, 0.05)",
 				"transparent-black": " rgba(0, 0, 0, 0.8)",
 				grey: "#e5e5e5",
-				"grey-dark": "#222326",
+				"grey-dark": "#585C67",
 				"primary-text": "#b4bcd0",
 				"black-text": "#000",
 			},

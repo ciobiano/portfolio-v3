@@ -1,16 +1,20 @@
-"use client";
+'use client'
+
 
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import SongCard, { SongProps } from "./SongCard";
 import { authenticateSpotify, fetchSongs } from "@/app/data/song";
+import SpotifyWebApi from "spotify-web-api-js";
+
+const spotifyApi = new SpotifyWebApi();
 
 const SongBox: React.FC = () => {
 	const [songs, setSongs] = useState<SongProps[]>([]);
 
 	useEffect(() => {
 		const playlistUrl =
-			"https://open.spotify.com/playlist/1dsHW66O2AJ2pDS68q58A1?si=7866048a8b9f4c50";
+			"https://open.spotify.com/playlist/4nOQCObfbSQ2nbT6rFaEgl";
 
 		authenticateSpotify().then((authenticated) => {
 			if (authenticated) {
