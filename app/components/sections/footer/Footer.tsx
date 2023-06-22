@@ -52,33 +52,32 @@ const IconLink = [
 ];
 
 export const Footer = () => (
-	<footer className="mt-12 border-t border-transparent-white py-[5.6rem] text-xs">
-		<Container className="flex flex-col justify-between lg:flex-row">
-			<div>
-				<div className="block h-full flex-row justify-between lg:flex-col text-sm">
-					<div className="block max-w-md items-center text-grey">
-						<Logo className="mr-4 h-4 w-4" />
-						<p className="my-4" >
-							Never far from your reach, and alway delighted to hear from you.
-						</p>
-					</div>
-					<div className="mt-auto flex space-x-4 text-grey">
-						{IconLink.map((icon, index) => (
-							<Link key={index} href={icon.href}>
-								<Icon path={icon.iconPath} color={icon.color} size={1} />
-							</Link>
-						))}
-						{/* <TwitterIcon />
+	<footer className="mt-12 border-t border-transparent-white py-[5.6rem] mx-auto text-xs ">
+		<Container className="flex flex-col justify-between lg:flex-row ">
+			<div className="block  h-full md:w-1/2 flex-row lg:flex-col text-sm  ">
+				<div className="block max-w-md items-center text-grey ">
+					<Logo className="mr-4 h-4 w-4" />
+					<p className="my-4">
+						Never far from your reach, and alway delighted to hear from you.
+					</p>
+				</div>
+				<div className="flex space-x-4 text-grey">
+					{IconLink.map((icon, index) => (
+						<Link key={index} href={icon.href}>
+							<Icon path={icon.iconPath} color={icon.color} size={1} />
+						</Link>
+					))}
+					{/* <TwitterIcon />
 						<GithubIcon />
 						<SlackIcon /> */}
-					</div>
 				</div>
 			</div>
-			<div className="flex flex-wrap">
+
+			<div className="flex flex-wrap ">
 				{footerLinks.map((column) => (
 					<div
 						key={column.title}
-						className="mt-10 min-w-[50%] lg:mt-0 lg:min-w-[18rem]"
+						className="mt-10 min-w-[50%] lg:mt-0 lg:min-w-[20%] gap-x-3 md:m-7"
 					>
 						<h3 className="mb-3 font-medium">{column.title}</h3>
 						<ul>

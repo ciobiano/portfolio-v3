@@ -51,11 +51,11 @@ export default function RootLayout({
 					<main className="bg-hero-gradient pt-[var(--nav-height)]">
 						{children}
 					</main>
-					<footer>
-						<Container>
+					
+						
 							<Footer/>
-						</Container>
-					</footer>
+						
+					
 				</div>
 			</body>
 		</html>
