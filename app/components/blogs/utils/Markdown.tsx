@@ -1,7 +1,7 @@
 'use client'
 
 
-import styles from "~/styles/blog.module.scss";
+import styles from "@/app/styles/blog.module.scss";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 import { Link } from "./link";
@@ -26,7 +26,12 @@ export function Markdown({ code }: Props) {
 	const Component = useMDXComponent(code);
 
 	return (
-		<main className={["prose max-w-none", styles.reactMarkdown].join(" ")}>
+		<main
+			className={[
+				"prose prose-quoteless text-grey dark:prose-invert max-w-none ",
+				styles.reactMarkdown,
+			].join(" ")}
+		>
 			<Component components={components as any} />
 		</main>
 	);

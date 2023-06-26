@@ -16,19 +16,19 @@ export default function BlogHeader({ post }: Props) {
 	const readTimeId = React.useId();
 
 	return (
-		<header className="bg-transparent text-md py-14 mb-6">
-			<div className=" mx-auto px-5 md:px-0">
-				<div className="border-b-2 border-accent/70 mb-5 pb-5 flex flex-col md:flex-row md:justify-between">
+		<header className="bg-transparent text-md py-14 mb-6 mx-auto">
+			<div className=" mx-auto ">
+				<div className="border-b-2 border-grey-dark mb-5 pb-5 flex flex-col md:flex-row md:justify-between">
 					<div>
-						<h1 className="mb-3 text-3xl font-bold md:text-4xl font-title">
+						<h1 className="mb-3 text-md font-bold md:text-lg font-title text-gradient">
 							{post.title}
 						</h1>
-						<p className="text-grey-dark">{post.description}</p>
+						<p className="text-grey text-xs md:text-sm">{post.description}</p>
 					</div>
 
 					<div
 						style={{ scrollbarWidth: "thin" }}
-						className="flex gap-6 overflow-x-auto"
+						className="gap-6 overflow-x-auto py-5  text-xs"
 					>
 						<p className="font-medium min-w-fit ">
 							<time dateTime={new Date(post.createdAt).toISOString()}>
@@ -36,7 +36,7 @@ export default function BlogHeader({ post }: Props) {
 							</time>
 						</p>
 						{readingTime ? (
-							<p className="flex items-center gap-2 min-w-fit">
+							<p className="flex items-center  min-w-fit">
 								<FcAlarmClock
 									aria-labelledby={readTimeId}
 									className="fill-grey-dark"

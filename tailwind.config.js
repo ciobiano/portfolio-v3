@@ -33,15 +33,15 @@ module.exports = {
 				"transparent-black": " rgba(0, 0, 0, 0.8)",
 				grey: "#e5e5e5",
 				"grey-dark": "#585C67",
-				"primary-text": "#b4bcd0",
-				"black-text": "#000",
+				"text-gradient":'var(--text-gradient)',
+				"grey-solid": "rgba(255, 255, 255, 0.09)",
+				'black-text':"#000"
 			},
 			backgroundImage: {
 				"hero-gradient":
-					"					radial-gradient(ellipse 80% 50% at 50% -20%,radial-gradient(ellipse 80% 50% at 50% -20%,rgba(56, 56, 56,1)",
+					"radial-gradient(ellipse 80% 50% at 50% -20%,radial-gradient(ellipse 80% 50% at 50% -20%,rgba(56, 56, 56,1)",
 				"card-gradient":
-					"  linear-gradient(90deg, hsla(0, 0%, 20%, 1) 0%, hsla(0, 2%, 11%, 1) 100%)",
-
+					"linear-gradient(90deg, hsla(0, 0%, 20%, 1) 0%, hsla(0, 2%, 11%, 1) 100%)",
 				"resume-gradient":
 					"radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);",
 				"radial-faded":
@@ -69,7 +69,11 @@ module.exports = {
 					},
 				},
 			},
+			
 		},
 	},
-	plugins: [],
+	plugins: [
+		require("@tailwindcss/typography"),
+		// ...
+	],
 };

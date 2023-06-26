@@ -37,9 +37,36 @@ export const Post = defineDocumentType(() => ({
 	},
 }));
 
+export  const Project = defineDocumentType(() => ({
+	name: "Project",
+	filePathPattern: "**/projects/**/*.mdx",
+	contentType: "mdx",
+
+	fields: {
+		...baseFields,
+
+		// custom fields
+		coverImage: { type: "image", required: false },
+		coverImageAlt: { type: "string", required: false },
+		coverImageCaption: { type: "string", required: false },
+
+		
+		// computed fields
+		slug: {
+			type: "string",
+			resolve: (doc) => `${doc._raw.flattenedPath}`,
+		},
+		slugAsParams: {
+			type: "string",
+			resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+
+		},
+	},
+}));
+
 export default makeSource({
 	contentDirPath: "./app/data",
-	documentTypes: [Post],
+	documentTypes: [Post,Project],
 	mdx: {
 		esbuildOptions: (options) => {
 			options.loader = {

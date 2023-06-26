@@ -35,9 +35,30 @@ var Post = defineDocumentType(() => ({
     }
   }
 }));
+var Project = defineDocumentType(() => ({
+  name: "Project",
+  filePathPattern: "**/projects/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    ...baseFields,
+    // custom fields
+    coverImage: { type: "image", required: false },
+    coverImageAlt: { type: "string", required: false },
+    coverImageCaption: { type: "string", required: false },
+    // computed fields
+    slug: {
+      type: "string",
+      resolve: (doc) => `${doc._raw.flattenedPath}`
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/")
+    }
+  }
+}));
 var contentlayer_config_default = makeSource({
   contentDirPath: "./app/data",
-  documentTypes: [Post],
+  documentTypes: [Post, Project],
   mdx: {
     esbuildOptions: (options) => {
       options.loader = {
@@ -76,6 +97,7 @@ var contentlayer_config_default = makeSource({
 });
 export {
   Post,
+  Project,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-VFK7IOSG.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-46KBKLNO.mjs.map

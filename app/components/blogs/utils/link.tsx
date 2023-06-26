@@ -15,7 +15,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 	const isExternal = href.startsWith("http");
 	const className = isNav
 		? rest.className
-		: twMerge("text-neutral-700 hover:text-neutral-900", rest.className);
+		: twMerge("text-neutral-100 hover:text-neutral-500", rest.className);
 
 	if (isExternal || isHash) {
 		const config = isExternal
