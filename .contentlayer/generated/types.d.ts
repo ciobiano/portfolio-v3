@@ -41,9 +41,7 @@ export type Project = {
   archived?: boolean | undefined
   readingTime?: string | undefined
   keywords?: string[] | undefined
-  coverImage?: ImageFieldData | undefined
-  coverImageAlt?: string | undefined
-  coverImageCaption?: string | undefined
+  url?: string | undefined
   slug?: string | undefined
   slugAsParams?: string | undefined
   /** MDX file body */

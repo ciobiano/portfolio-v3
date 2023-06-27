@@ -2,6 +2,8 @@ import type { Post} from "contentlayer/generated";
 import { getArticleSlug } from "@/app/lib/Mdx/get-article-slug";
 import { ArticleListItem } from "./articleItem";
 
+
+
 interface Props {
 	articles: (Post)[];
 	type: "blog" | "projects";

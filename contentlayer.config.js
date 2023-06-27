@@ -46,9 +46,7 @@ export  const Project = defineDocumentType(() => ({
 		...baseFields,
 
 		// custom fields
-		coverImage: { type: "image", required: false },
-		coverImageAlt: { type: "string", required: false },
-		coverImageCaption: { type: "string", required: false },
+		url: { type: "string", required: false },
 
 		
 		// computed fields

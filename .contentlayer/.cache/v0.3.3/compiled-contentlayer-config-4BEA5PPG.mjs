@@ -42,9 +42,7 @@ var Project = defineDocumentType(() => ({
   fields: {
     ...baseFields,
     // custom fields
-    coverImage: { type: "image", required: false },
-    coverImageAlt: { type: "string", required: false },
-    coverImageCaption: { type: "string", required: false },
+    url: { type: "string", required: false },
     // computed fields
     slug: {
       type: "string",
@@ -100,4 +98,4 @@ export {
   Project,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-46KBKLNO.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-4BEA5PPG.mjs.map

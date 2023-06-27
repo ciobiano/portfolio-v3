@@ -2,8 +2,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 
 
 const spotifyApi = new SpotifyWebApi();
-// const clientId = "4247fdc28d44452590bac2ff08feb7c6";
-// const clientSecret = "dce07a27c3494f829c0ef416113a96b4";
+
 
 
 export const authenticateSpotify = async () => {

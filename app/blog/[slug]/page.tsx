@@ -6,8 +6,7 @@ import BlogHeader from "../../components/blogs/blog-header";
 import { notFound } from "next/navigation";
 import { Markdown } from "@/app/components/blogs/utils/Markdown";
 import { BlogFooter } from "@/app/components/blogs/blog-footer";
-import { allPosts } from "contentlayer/generated";
-import { getArticleSlug } from "@/app/lib/Mdx/get-article-slug";
+
 
 interface BlogSlugPageProps {
 	params: { slug: string };
