@@ -7,10 +7,11 @@ import { Card } from "../components/utils/Card";
 import { Link } from "../components/utils/Link";
 
 import { Article } from "./article";
+import { getArticleSlug } from "../lib/Mdx/get-article-slug";
 
 export default function Project() {
 	const featured = allProjects.find((project) => project.featured)!;
-	const starred = allProjects.filter((project) => project);
+	const starred = allProjects.filter((project) => project.starred);
 
 	const sorted = allProjects
 		.filter((project, index, self) => {
@@ -19,7 +20,7 @@ export default function Project() {
 			return (
 				!project.archived &&
 				self.findIndex((p) => p.createdAt === project.createdAt) === index &&
-				!project.featured
+				!project.featured && !project.starred
 			);
 		})
 		.sort(
@@ -42,7 +43,7 @@ export default function Project() {
 
 				<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 py-16 ">
 					<Card>
-						<Link href={""}>
+						<Link href={`/project/${getArticleSlug(featured)}`}>
 							<article className="relative w-full h-full px-4 md:px-8 ">
 								<div className="flex items-center justify-between gap-2">
 									<div className="text-xs ">
@@ -77,42 +78,42 @@ export default function Project() {
 							</article>
 						</Link>
 					</Card>
-					<div className="flex flex-col w-full mx-auto gap-4 border-t border-gray lg:mx-0 lg:border-t-0">
-						{starred.slice(0, 2).map((project) =>
+					<div className="flex flex-col w-full mx-auto mt-16 md:mt-0 gap-4 border-t border-transparent-white lg:mx-0 lg:border-t-0">
+						{starred.map((project) =>
 							project ? (
 								<Card key={project.slug}>
-									<Article project={project} />
+									<Article articles={project} type="projects" />
 								</Card>
 							) : null
 						)}
 					</div>
 				</div>
-				<div className="hidden w-full h-px md:block bg-transparent-white" />
-				<div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3 pt-5">
+			<div className="hidden w-full h-px md:block bg-transparent-white mb-16 " />
+				<div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 mt-11 md:grid-cols-3 pt-5">
 					<div className="grid grid-cols-1 gap-4">
-						{starred
-							.filter((_, i) => i % 3 === 0 && !_.featured)
+						{sorted
+							.filter((_, i) => i % 3 === 0)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Article project={project} />
+									<Article articles={project} type="projects" />
 								</Card>
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
-						{starred
-							.filter((_, i) => i % 3 === 1 && !_.featured)
+						{sorted
+							.filter((_, i) => i % 3 === 1)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Article project={project} />
+									<Article articles={project} type="projects" />
 								</Card>
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
-						{starred
-							.filter((_, i) => i % 3 === 2 && !_.featured)
+						{sorted
+							.filter((_, i) => i % 3 === 2)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Article project={project} />
+									<Article articles={project} type="projects" />
 								</Card>
 							))}
 					</div>

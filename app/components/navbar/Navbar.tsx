@@ -68,10 +68,10 @@ function Navbar() {
 							)}
 						>
 							<li>
-								<Link href="#work">Work</Link>
+								<Link href="/project">Work</Link>
 							</li>
 							<li>
-								<Link href="#work">About</Link>
+								<Link href="/about">About</Link>
 							</li>
 							<li>
 								<Link href="/blog">Blog</Link>
@@ -79,9 +79,7 @@ function Navbar() {
 							<li className="md:hidden">
 								<Link href="/">Contact Me </Link>
 							</li>
-							<li className="md:hidden">
-								<Link href="/">Contact Me </Link>
-							</li>
+							
 						</ul>
 					</nav>
 				</div>

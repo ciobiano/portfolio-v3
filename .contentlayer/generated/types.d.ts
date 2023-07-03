@@ -18,6 +18,7 @@ export type Post = {
   createdAt: IsoDateTimeString
   updatedAt?: IsoDateTimeString | undefined
   featured?: boolean | undefined
+  starred?: boolean | undefined
   archived?: boolean | undefined
   readingTime?: string | undefined
   keywords?: string[] | undefined
@@ -38,6 +39,7 @@ export type Project = {
   createdAt: IsoDateTimeString
   updatedAt?: IsoDateTimeString | undefined
   featured?: boolean | undefined
+  starred?: boolean | undefined
   archived?: boolean | undefined
   readingTime?: string | undefined
   keywords?: string[] | undefined

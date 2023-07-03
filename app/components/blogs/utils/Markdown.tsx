@@ -28,7 +28,7 @@ export function Markdown({ code }: Props) {
 	return (
 		<main
 			className={[
-				"prose prose-quoteless text-grey dark:prose-invert max-w-none ",
+				"prose prose-quoteless text-black  max-w-2xl prose-headings:text-black  ",
 				styles.reactMarkdown,
 			].join(" ")}
 		>

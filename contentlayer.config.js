@@ -11,6 +11,7 @@ const baseFields = {
 	createdAt: { type: "date", required: true },
 	updatedAt: { type: "date", required: false },
 	featured: { type: "boolean", required: false },
+	starred: { type: "boolean", required: false },
 	archived: { type: "boolean", required: false },
 	readingTime: { type: "string", required: false },
 	keywords: { type: "list", of: { type: "string" }, required: false },
@@ -45,8 +46,7 @@ export  const Project = defineDocumentType(() => ({
 	fields: {
 		...baseFields,
 
-		// custom fields
-		url: { type: "string", required: false },
+	   url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
 
 		
 		// computed fields

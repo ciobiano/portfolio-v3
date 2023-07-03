@@ -5,6 +5,8 @@ const nextConfig = {
 	images: {
 		domains: ["images.unsplash.com", "framerusercontent.com", "i.scdn.co"],
 	},
+	reactStrictMode: true,
+	swcMinify: true,
 };
 
 module.exports = withContentlayer(nextConfig);

@@ -7,7 +7,7 @@ type Props = {};
 
 export const ProjectPage = (props: Props) => {
 	return (
-		<section className="flex flex-col pt-28 lg:pt-72 items-center justify-center mx-auto  ">
+		<section className="flex flex-col pt-28 lg:pt-[14rem] items-center justify-center mx-auto  ">
 			<div className="grid w-full max-h-min grid-cols-1 grid-rows-12 place-content-center place-items-center gap-x-5 gap-y-7 md:gap-y-10 md:grid-cols-2 md:grid-rows-2 ">
 				{projects.map((project, index) => {
 					return (

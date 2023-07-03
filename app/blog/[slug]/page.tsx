@@ -20,14 +20,14 @@ export default function BlogSlugPage({ params }: BlogSlugPageProps) {
 		return notFound();
 	}
 	return (
-		<Container className="mt-5">
+		<div className="relative max-w-screen bg-off-white mx-auto">
 			<BlogHeader post={item} />
-      <section className="pb-6">
-        <Markdown code={item.body.code}/>
-        <BlogFooter post={item} />
-      </section>
 
-		</Container>
+			<Container className="pb-6 mx-autopx-4 py-12 prose prose-zinc prose-quoteless  ">
+				<Markdown code={item.body.code} />
+				<BlogFooter post={item} />
+			</Container>
+		</div>
 	);
 }
  

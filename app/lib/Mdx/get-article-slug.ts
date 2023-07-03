@@ -1,6 +1,6 @@
-import type { Post } from "contentlayer/generated";
+import type { Post, Project } from "contentlayer/generated";
 
-export function getArticleSlug(post: Post ) {
+export function getArticleSlug(post: Post | Project ) {
 	return post._raw.sourceFileName.replace(/\.md(x)?/, "");
 }
 
@@ -10,6 +10,7 @@ export function formatArticleSlugPath(post: {
 	const types = {
 		posts: "blog",
 		snippets: "snippets",
+		project: "project"
 	};
 
 	const [prefix, slug] = post._raw.flattenedPath.split("/");

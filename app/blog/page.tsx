@@ -18,9 +18,9 @@ export default async function BlogSlugPage() {
     .sort((post1, post2) => new Date(post1.createdAt).getTime() - new Date(post2.createdAt).getTime())
 
   return (
-    <div className='relative pb-16'>
+    <div className='relative  mt-16' >
 
-		<Container className="my-10 ">
+		<Container>
 			<HeroTitle className="md:text-2xl pb-6  ">Blog posts</HeroTitle>
 			<div className="my-3">
 				<HeroSubtitle>Featured</HeroSubtitle>

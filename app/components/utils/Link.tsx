@@ -10,7 +10,7 @@ const link = cva(
 		variants: {
 			intent: {
 				primary:
-					"bg-gray-dark border-gray-light hover:border-accent hover:bg-accent hover:text-secondary text-primary focus-visible:bg-accent focus-visible:border-accent",
+					"  hover:bg-accent hover:text-secondary text-primary focus-visible:bg-accent focus-visible:border-accent",
 				secondary:
 					"border-grey-dark text-md  hover:border-accent focus-visible:border-accent p-2",
 				

@@ -3,13 +3,13 @@
 
   [data-info] pre {
     background-color: theme("colors.transparent");
-    color: theme("colors.grey");
+    color: theme("colors.black");
   }
 
   pre {
     border: none;
     font-family: theme("fontFamily.sans");
-    background-color: theme("colors.transparent-white");
+    background-color: theme("colors.black");
     padding: 0.4em 0.5em;
 
     code {
@@ -23,8 +23,8 @@
     border-radius: theme("borderRadius.md");
     padding: theme("padding.1") theme("padding[1.5]");
     font-weight: theme("fontWeight.medium");
-    background-color: theme("colors.grey-solid");
-    color: theme("colors.off-white");
+    background-color: theme("colors.grey");
+    color: theme("colors.black");
 
     &::before,
     &::after {
@@ -62,7 +62,7 @@
       border: 1px solid  theme("colors.grey-dark");
       margin-bottom: -1.5px;
       border-radius: theme("borderRadius.md") theme("borderRadius.md") 0 0;
-      background-color: theme("colors.transparent");
+      background-color: theme("colors.background");
 
       + [data-code-pre] {
         border-radius: 0 0 theme("borderRadius.md") theme("borderRadius.md");
@@ -70,7 +70,7 @@
     }
 
     [data-language-tag] {
-      border: theme("borderWidth.2") solid theme("colors.grey-dark");
+      border: theme("borderWidth.2") solid theme("colors.black");
     }
 
     [data-line="true"] {

@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import type { Post } from "contentlayer/generated";
+import type { Post, Project } from "contentlayer/generated";
 import format from "date-fns/format";
 import { FcAlarmClock } from "react-icons/fc";
+import { Container } from '../utils/container';
 
 interface Props {
-	post: Post ;
+	post: Post | Project ;
 }
 
 export default function BlogHeader({ post }: Props) {
@@ -16,10 +17,10 @@ export default function BlogHeader({ post }: Props) {
 	const readTimeId = React.useId();
 
 	return (
-		<header className="bg-transparent text-md py-14 mb-6 mx-auto">
-			<div className=" mx-auto ">
-				<div className="border-b-2 border-grey-dark mb-5 pb-5 flex flex-col md:flex-row md:justify-between">
-					<div>
+		<header className="bg-background   text-md pb-16">
+			<Container >
+				<div className=" mb-5 pb-5 flex flex-col md:flex-row mt-16  m-auto"  >
+					<div className="">
 						<h1 className="mb-3 text-md font-bold md:text-lg font-title text-gradient">
 							{post.title}
 						</h1>
@@ -28,7 +29,7 @@ export default function BlogHeader({ post }: Props) {
 
 					<div
 						style={{ scrollbarWidth: "thin" }}
-						className="gap-6 overflow-x-auto py-5  text-xs"
+						className="gap-6 overflow-x-auto py-5   text-xs text-zinc-400 md:ml-[16rem]  "
 					>
 						<p className="font-medium min-w-fit ">
 							<time dateTime={new Date(post.createdAt).toISOString()}>
@@ -45,8 +46,9 @@ export default function BlogHeader({ post }: Props) {
 							</p>
 						) : null}
 					</div>
-				</div>
+				
 			</div>
+			</Container>
 		</header>
 	);
 }

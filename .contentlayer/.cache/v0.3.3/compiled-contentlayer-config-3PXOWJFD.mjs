@@ -11,6 +11,7 @@ var baseFields = {
   createdAt: { type: "date", required: true },
   updatedAt: { type: "date", required: false },
   featured: { type: "boolean", required: false },
+  starred: { type: "boolean", required: false },
   archived: { type: "boolean", required: false },
   readingTime: { type: "string", required: false },
   keywords: { type: "list", of: { type: "string" }, required: false }
@@ -41,8 +42,7 @@ var Project = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     ...baseFields,
-    // custom fields
-    url: { type: "string", required: false },
+    url: { type: "string", resolve: (post) => `/posts/${post._raw.flattenedPath}` },
     // computed fields
     slug: {
       type: "string",
@@ -98,4 +98,4 @@ export {
   Project,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-4BEA5PPG.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-3PXOWJFD.mjs.map
