@@ -1,10 +1,9 @@
-'use client'
-
+"use client";
 
 import styles from "@/app/styles/blog.module.scss";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import { Link } from "./link";
+import { Link } from "../blogs/utils/link";
 import { Info } from "./info";
 import Image from "next/image";
 import { PreCode } from "./pre";
@@ -28,7 +27,7 @@ export function Markdown({ code }: Props) {
 	return (
 		<main
 			className={[
-				"prose prose-quoteless text-black  max-w-2xl prose-headings:text-black  ",
+				"prose prose-quoteless text-black  max-w-fit prose-headings:text-black  ",
 				styles.reactMarkdown,
 			].join(" ")}
 		>

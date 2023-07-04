@@ -7,6 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { Work } from "@/app/data/work";
 
 const About = () => {
 	const [ref, inView] = useInView({
@@ -37,7 +38,7 @@ const About = () => {
 			variants={variants}
 			transition={{ duration: 0.4, ease: "easeOut" }}
 			ref={ref}
-			className="mx-auto  items-start mt-[5rem] md:mt-[10rem]  max-w-[1215px]  md:grid-cols-2 grid gap-10 "
+			className="mx-auto  items-start mt-[5rem] md:mt-[10rem]  max-w-[1215px]  md:grid-cols-2 grid gap-10  justify-between"
 		>
 			<div className="flex flex-col text-gradient  gap-3 md:text-xl text-md font-medium">
 				<h1>
@@ -61,10 +62,10 @@ const About = () => {
 				initial="hidden"
 				transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
 				ref={ref}
-				className="grid  md:grid-cols-1 "
+				className="grid justify-between ml-auto  md:grid-cols-1 "
 			>
 				
-				<Resume />
+				<Resume WorkRoles={Work}/>
 			</motion.div>
 		</motion.div>
 	);

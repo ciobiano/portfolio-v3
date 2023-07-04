@@ -29,7 +29,7 @@ export default function BlogHeader({ post }: Props) {
 
 					<div
 						style={{ scrollbarWidth: "thin" }}
-						className="gap-6 overflow-x-auto py-5   text-xs text-zinc-400 md:ml-[16rem]  "
+						className="gap-6 overflow-x-auto py-5   text-xs text-zinc-400  justify-between md:absolute md:right-[21.5rem]  "
 					>
 						<p className="font-medium min-w-fit ">
 							<time dateTime={new Date(post.createdAt).toISOString()}>

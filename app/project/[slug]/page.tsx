@@ -1,10 +1,9 @@
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 
-import { Markdown } from "@/app/components/blogs/utils/Markdown";
+import { Markdown } from "@/app/components/utils/Markdown";
 import { getProject } from "@/app/lib/Mdx/get-project";
 import { Header } from "./header";
-
 
 export const revalidate = 60;
 
@@ -14,11 +13,9 @@ type Props = {
 	};
 };
 
-
-
 export default async function ProjecttPage({ params }: Props) {
-	  const project = getProject(params.slug)
-  if (!project) notFound();
+	const project = getProject(params.slug);
+	if (!project) notFound();
 
 	return (
 		<div className=" bg-off-white max-w-screen mx-auto  ">
@@ -29,6 +26,3 @@ export default async function ProjecttPage({ params }: Props) {
 		</div>
 	);
 }
-
-
-
