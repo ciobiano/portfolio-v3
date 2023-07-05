@@ -12,7 +12,7 @@ const link = cva(
 				primary:
 					"  hover:bg-accent hover:text-secondary text-primary focus-visible:bg-accent focus-visible:border-accent",
 				secondary:
-					"border-grey-dark text-md  hover:border-accent focus-visible:border-accent p-2",
+					"border-grey-dark text-md  hover:border-accent focus-visible:border-accent p-2 ",
 				
 				none: "border-transparent",
 			},

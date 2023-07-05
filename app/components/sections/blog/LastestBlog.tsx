@@ -16,20 +16,19 @@ export const LastestBlog = (props: Props) => {
 					Latest blog posts
 				</h2>
 
-				<Link className="max-w-fit items-center  inline-flex" href="#">
+				<Link className="max-w-fit items-center  inline-flex" href="/blog">
 					Browse all blog posts
-					
 					<BsArrowRightShort width={25} height={25} />
 				</Link>
 			</header>
 
 			<ul className="mt-20 flex flex-col gap-5">
-				{ListItem.slice(0,3).map((article) => (
+				{ListItem.slice(0, 3).map((article) => (
 					<li
 						className="flex justify-between group"
 						key={getArticleSlug(article)}
 					>
-						<Link className="w-full" href="">
+						<Link className="w-full" href={`/blog/${getArticleSlug(article)}`}>
 							<h3 className="font-semibold  text-xs md:text-sm transition-colors border-grey-dark group-hover:border-b-grey border-b max-w-fit">
 								{article.title}
 							</h3>
@@ -42,7 +41,7 @@ export const LastestBlog = (props: Props) => {
 						<Link
 							aria-label="View full blog post"
 							className="group-hover:scale-125 group-hover:-rotate-45 group-hover:border-accent transition-all transform origin-center "
-							href={"#"}
+							href={`/blog/${getArticleSlug(article)}`}
 						>
 							<div className="border border-white  rounded-full p-2">
 								<BsArrowRightShort width={25} height={25} />

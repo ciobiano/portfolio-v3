@@ -9,26 +9,25 @@ import { Link } from "../components/utils/Link";
 import { Article } from "./article";
 import { getArticleSlug } from "../lib/Mdx/get-article-slug";
 
+
+export async function generateMetadata() {
+	return {
+		title: "Project",
+		description: " A collection of my projects",
+	};
+}
+
+
+
 export default function Project() {
-	const featured = allProjects.find((project) => project.featured)!;
+	
+
+  const featured = allProjects.find((project) => project.featured)!;
 	const starred = allProjects.filter((project) => project.starred);
 
-	const sorted = allProjects
-		.filter((project, index, self) => {
-			// Filter out projects that are archived, have the same createdAt date as a previous project,
-			// or are featured
-			return (
-				!project.archived &&
-				self.findIndex((p) => p.createdAt === project.createdAt) === index &&
-				!project.featured && !project.starred
-			);
-		})
-		.sort(
-			(a, b) =>
-				new Date(b.createdAt ?? Number.POSITIVE_INFINITY).getTime() -
-				new Date(a.createdAt ?? Number.POSITIVE_INFINITY).getTime()
-		);
-
+	const nonStarredNonFeatured = allProjects.filter(
+		(project) => !project.starred && !project.featured
+	);
 
 	return (
 		<div className="relative pb-16">
@@ -88,10 +87,10 @@ export default function Project() {
 						)}
 					</div>
 				</div>
-			<div className="hidden w-full h-px md:block bg-transparent-white mb-16 " />
+				<div className="hidden w-full h-px md:block bg-transparent-white mb-16 " />
 				<div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 mt-11 md:grid-cols-3 pt-5">
 					<div className="grid grid-cols-1 gap-4">
-						{sorted
+						{nonStarredNonFeatured
 							.filter((_, i) => i % 3 === 0)
 							.map((project) => (
 								<Card key={project.slug}>
@@ -100,7 +99,7 @@ export default function Project() {
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
-						{sorted
+						{nonStarredNonFeatured
 							.filter((_, i) => i % 3 === 1)
 							.map((project) => (
 								<Card key={project.slug}>
@@ -109,7 +108,7 @@ export default function Project() {
 							))}
 					</div>
 					<div className="grid grid-cols-1 gap-4">
-						{sorted
+						{nonStarredNonFeatured
 							.filter((_, i) => i % 3 === 2)
 							.map((project) => (
 								<Card key={project.slug}>

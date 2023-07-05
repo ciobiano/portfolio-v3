@@ -6,9 +6,34 @@ import BlogHeader from "../../components/blogs/blog-header";
 import { notFound } from "next/navigation";
 import { Markdown } from "@/app/components/utils/Markdown";
 import { BlogFooter } from "@/app/components/blogs/blog-footer";
+import { getArticleSlug } from "@/app/lib/Mdx/get-article-slug";
+import { allPosts } from "contentlayer/generated";
 
 interface BlogSlugPageProps {
 	params: { slug: string };
+}
+
+
+export async function generateMetadata({ params }: BlogSlugPageProps) {
+	const item = getBlogPost(params.slug);
+
+	if (!item) {
+
+		return {};
+	}
+
+	return (
+		item && {
+
+			title: item.title,
+			description: item.description,
+
+
+		}
+
+
+	)
+
 }
 
 export default function BlogSlugPage({ params }: BlogSlugPageProps) {
@@ -28,8 +53,8 @@ export default function BlogSlugPage({ params }: BlogSlugPageProps) {
 	);
 }
 
-// export async function getStaticPaths() {
-//   return allPosts.map((snippet) => ({
-//    slug: getArticleSlug(snippet),
-//   }));
-// }
+export async function generateStaticParams() {
+	return allPosts.map((snippet) => ({
+		slug: getArticleSlug(snippet),
+	}));
+}

@@ -32,11 +32,14 @@ export function ArticleListItem({ isFeatured, article, type }: Props) {
 			{isFeatured ? (
 				<Link
 					
-					className="absolute -top-3 right-3.5 group-hover:scale-125 group-hover:-rotate-40 group-hover:border-accent"
+					className="absolute -top-8 right-3.5 group-hover:scale-125 group-hover:-rotate-40 group-hover:border-accent rounded-full transition 
+					my-auto py-4  " 
 					intent="secondary"
 					href={`/blog/${getArticleSlug(article)}`}
 				>
-					<BsArrowRightShort width={25} height={25} />
+				
+					<BsArrowRightShort />
+					
 				</Link>
 			) : null}
 

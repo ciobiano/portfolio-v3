@@ -38,7 +38,7 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 								</dd>
 								<dt className="sr-only">Date</dt>
 								<dd
-									className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+									className="md:ml-auto text-xs text-zinc-400 dark:text-zinc-500"
 									aria-label={`${startDate} until ${endDate}`}
 								>
 									<time dateTime={endDate}>{startDate}</time>{" "}

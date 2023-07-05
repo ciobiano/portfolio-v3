@@ -7,6 +7,13 @@ import Skill from '../components/sections/about/Skill';
 
 type Props = {}
 
+export async function generateMetadata() {
+  return {
+    title: 'About',
+    description: 'A full datiled profile on me',
+  }
+}
+
 export default function AboutPage(props: Props)  {
   return (
     <main className='py-16'>

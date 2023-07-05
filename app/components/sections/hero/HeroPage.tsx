@@ -13,7 +13,7 @@ export const HeroPage = () => {
 				transition={{ ease: "easeOut"}}
 				className="text-sm flex  mt-10  items-center"
 			>
-				<Button href="/" variant="secondary" size="small">
+				<Button href="/blog" variant="secondary" size="small">
 					<span>Blog 2023 Release – {""} coming soon </span>
 					<Highlight>→</Highlight>
 				</Button>

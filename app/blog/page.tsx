@@ -8,7 +8,12 @@ import { ArticleListItem } from '../components/blogs/articleItem'
 import { ArticlesList } from '../components/blogs/articleList';
 
 
-
+export async function generateMetadata() {
+	return {
+		title: "Blog",
+		description: "A collection of my thoughts and ideas",
+	};
+}
 
 
 export default async function BlogSlugPage() {
