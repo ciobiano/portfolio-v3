@@ -3,7 +3,12 @@ import SpotifyWebApi from "spotify-web-api-js";
 
 const spotifyApi = new SpotifyWebApi();
 
+const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
+const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
+console.log(clientId, clientSecret);
 
+
+console.log(clientId, clientSecret)
 
 export const authenticateSpotify = async () => {
 	try {
