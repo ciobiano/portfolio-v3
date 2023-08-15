@@ -1,4 +1,4 @@
-import type {allProjects, Post, Project } from "@/.contentlayer/generated";
+import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { getArticleSlug } from "../lib/Mdx/get-article-slug";
 
