@@ -9,12 +9,12 @@ export const Logo = ({ className }: { className?: string }) => {
 	return (
 		<div>
 			<Link
-				className="items-center font-sans font-bold gap-1 text-xs flex 
+				className="items-center font-sans font-bold text-xs flex 
 				"
 				href="/"
 			>
 				<FaBullseye size={30} />
-				Bg_Ralph
+				biano Ralph
 			</Link>
 		</div>
 	);
