@@ -8,7 +8,6 @@ const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
 
 
 
-console.log(clientId, clientSecret)
 
 export const authenticateSpotify = async () => {
 	try {

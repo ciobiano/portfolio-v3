@@ -158,7 +158,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				)}
 			</motion.div>
 
-			<div className="text-[14px] flex gap-2  ">
+			<div className="text-[14px] flex gap-2  text-black ">
 				<h1 className={`${available ? "block" : "hidden"} md:hidden`}>
 					<span className="font-bold">{title} </span>by {creator}
 				</h1>
