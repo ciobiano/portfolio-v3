@@ -4,7 +4,7 @@ import {
   twitterOutline,
 } from "@/app/components/icons/mdi";
 
-import TruceLogo from "@/public/images/truce.svg";
+import WorkLogo from "@/public/images/truce.svg";
 
 export interface WorkRole {
   company: string;
@@ -18,17 +18,17 @@ export interface WorkRole {
 export const SocialMedia = [
   {
     name: "Twitter",
-    link: "https://twitter.com/BartoszJarocki",
+    link: "https://twitter.com/obiano_ralph",
     icon: twitterOutline,
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/bartosz.jarocki/",
+    link: "https://www.instagram.com/",
     icon: mdiInstagram,
   },
   {
     name: "Github",
-    link: "https://github.com/BartoszJarocki",
+    link: "https://github.com/ciobiano",
     icon: gitHubOutline,
   },
 ];
@@ -37,33 +37,33 @@ export const Work: WorkRole[] = [
   {
     company: "Truce Market",
     title: "Full Stack Developer",
-    logo: TruceLogo,
-    start: new Date(2021, 2, 4), // March 4, 2021
+    logo: WorkLogo,
+    start: new Date(2022, 2, 4), // March 4, 2021
     end: null,
 	url: "https://www.trucemarketplace.com/",
   },
   {
-    company: "Clevertech",
-    title: "Lead Android Developer → Full Stack Developer",
-    logo: TruceLogo,
-    start: new Date(2015, 7, 9), // August 9, 2015
+    company: "Freelance",
+    title: "Frontend Developer",
+    logo: WorkLogo,
+    start: new Date(2021, 4, 2), // May 2, 2012
+    end: new Date(2022, 1, 23), // May 23, 2015
+    url: "https://portfolio-v3-ochre.vercel.app",
+  },
+  {
+    company: "Machine & Equipment cooperation Africa",
+    title: "Intern Innovation Technology",
+    logo: WorkLogo,
+    start: new Date(2019, 4, 9), // April 9, 2015
     end: new Date(2021, 2, 7), // March 7, 2021
-	url: "https://www.clevertech.biz/",
+  url: "https://www.meca.com.ng",
   },
   {
-    company: "Jojo Mobile",
-    title: "Android Developer → Lead Android Developer",
-    logo: TruceLogo,
-    start: new Date(2012, 4, 2), // May 2, 2012
-    end: new Date(2015, 4, 23), // May 23, 2015
-	url: "https://jojomobile.pl/",
-  },
-  {
-    company: "Nokia Siemens Networks",
-    title: "C/C++ Developer",
-    logo: TruceLogo,
-    start: new Date(2010, 2, 18), // March 18, 2010
-    end: new Date(2012, 10, 9), // November 9, 2012
+    company: "Onyimart technology",
+    title: "Mobile Sales person",
+    logo: WorkLogo,
+    start: new Date(2017, 2, 18), // March 18, 2017
+    end: new Date(2019, 1, 9), // November 9, 2019
 	url: "https://www.nokia.com/networks/",
   },
 ];

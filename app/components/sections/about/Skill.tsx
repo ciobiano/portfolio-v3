@@ -14,7 +14,7 @@ const Skill = (props: Props) => {
 			<div className="flex flex-wrap py-10 gap-3">
 				{skills.map((skill, index) => (
 					<li key={index}>
-						<Button href="" variant="secondary" size="small">
+						<Button variant="secondary" size="small">
 							<Icon path={skill.iconPath} color={skill.color} size={0.8} />
 
 							{skill.name}

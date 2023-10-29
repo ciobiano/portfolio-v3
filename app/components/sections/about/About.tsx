@@ -46,9 +46,11 @@ const About = () => {
 					Development .
 				</h1>
 				<p className="flex text-sm ">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-					facilis repudiandae odit obcaecati saepe explicabo iusto doloribus
-					nesciunt voluptate voluptatibus .
+					Curiosity and code combine in my tale. I was first drawn to front-end
+					development because of the look and feel of the visual feedback. However, I
+					quickly discovered that the secret is in joining the dots—from front
+					to back. Now, in addition to being aesthetically pleasing, my web apps
+					are scalable and reliable.
 				</p>
 				<div className="mt-10 ">
 					<Skill />
@@ -64,8 +66,7 @@ const About = () => {
 				ref={ref}
 				className="grid justify-between ml-auto  md:grid-cols-1 "
 			>
-				
-				<Resume WorkRoles={Work}/>
+				<Resume WorkRoles={Work} />
 			</motion.div>
 		</motion.div>
 	);
