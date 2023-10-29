@@ -32,11 +32,11 @@ export function ExperienceSection({ WorkRoles }: WorkRoleProps) {
               <h3 className="font-semibold group-hover:underline text-sm ">
                 {role.company}
               </h3>
-              <p className="text-grey-dark text-xs flex-none ">{role.title}</p>
+              <p className="text-zinc-400 text-xs flex-none ">{role.title}</p>
               </div>
 
               <div className="flex flex-col sm:flex-row sm:gap-4 justify-between w-full sm:max-w-fit">
-                <h4 className="text-grey-dark mt-1 ">
+                <h4 className="text-zinc-400 mt-1 ">
                     {startDate} - {endDate}
                 </h4>
               </div>

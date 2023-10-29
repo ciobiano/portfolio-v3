@@ -28,7 +28,6 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 									src={role.logo}
 									alt="Logo"
 									className="h-7 w-7 rounded-full object-cover"
-									unoptimized
 								/>
 							</div>
 							<dl className="flex flex-auto flex-wrap gap-x-2">
@@ -38,7 +37,7 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 								</dd>
 								<dt className="sr-only">Date</dt>
 								<dd
-									className="md:ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+									className="md:ml-auto text-xs text-zinc-400 dark:text-zinc-400"
 									aria-label={`${startDate} until ${endDate}`}
 								>
 									<time dateTime={endDate}>{startDate}</time>{" "}
