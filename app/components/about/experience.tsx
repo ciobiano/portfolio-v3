@@ -20,7 +20,7 @@ export function ExperienceSection({ WorkRoles }: WorkRoleProps) {
 
 
           return (
-            <li key={roleIndex} className="mt-5">
+            <li key={roleIndex} className="mt-5 overflow-hidden">
               <a 
               target="_blank"
               rel="noopener noreferrer"

@@ -14,7 +14,7 @@ export const HeroPage = () => {
 				className="text-sm flex  mt-10  items-center"
 			>
 				<Button href="/blog" variant="secondary" size="small">
-					<span>Blog 2023 Release – {""} coming soon 🎉 </span>
+					<span> New post avaliable 🚨 </span>
 					<Highlight>→</Highlight>
 				</Button>
 			</motion.div>
