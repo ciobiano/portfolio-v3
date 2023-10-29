@@ -46,11 +46,10 @@ const About = () => {
 					Development .
 				</h1>
 				<p className="flex text-sm ">
-					Curiosity and code combine in my tale. I was first drawn to front-end
-					development because of the look and feel of the visual feedback. However, I
-					quickly discovered that the secret is in joining the dots—from front
-					to back. Now, in addition to being aesthetically pleasing, my web apps
-					are scalable and reliable.
+					The integration of these two areas enables me to adopt a comprehensive
+					approach to growth. I take into account not just the technical
+					elements, but also the user experience, to ensure that the apps I
+					design are both functionally powerful and visually beautiful.
 				</p>
 				<div className="mt-10 ">
 					<Skill />
