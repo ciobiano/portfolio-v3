@@ -158,10 +158,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				)}
 			</motion.div>
 
-			<div className="text-[14px] flex gap-2  text-black ">
-				<h1 className={`${available ? "block" : "hidden"} md:hidden`}>
+			<div className="text-[14px] flex gap-2  text-zinc-300 ">
+				<a href={link} target="" className={`${available ? "block" : "hidden"} md:hidden`}>
 					<span className="font-bold">{title} </span>by {creator}
-				</h1>
+				</a>
 
 				<p className={`${available ? "hidden" : "block"} text-[#7f7f7f]`}>
 					Unavailable
