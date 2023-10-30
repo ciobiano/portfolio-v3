@@ -9,7 +9,7 @@ interface WorkRoleProps {
 
 export function Resume({ WorkRoles }: WorkRoleProps) {
 	return (
-		<div className="max-w-[420px] rounded-2xl border p-6 border-zinc-700/40 bg-transparent-white">
+		<div className="max-w-[420px] rounded-2xl border p-6 border-zinc-700/40 bg-transparent-white overflow-hidden">
 			<h2 className="flex text-sm font-semibold ">
 				<BriefcaseIcon className="h-6 w-6 flex-none" />
 				<span className="ml-3">Work</span>
@@ -32,7 +32,7 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 							</div>
 							<dl className="flex flex-auto flex-wrap gap-x-2">
 								<dt className="sr-only">Company</dt>
-								<dd className="flex-none font-bold text-zinc-100">
+								<dd className=" flex-wrap  font-bold text-zinc-100">
 									{role.company}
 								</dd>
 								<dt className="sr-only">Date</dt>

@@ -37,8 +37,6 @@ export const skills: Skill[] = [
 	{ name: "Tailwind CSS", iconPath: mdiTailwind, color: "#38bdf8" },
 	{ name: "HTML5", iconPath: mdiLanguageHtml5, color: "#e34f26" },
 	{ name: "CSS3", iconPath: mdiLanguageCss3, color: "#3572b5" },
-	{ name: "Android", iconPath: mdiAndroid, color: "#3ddc84" },
-	{ name: "Kotlin", iconPath: mdiLanguageKotlin, color: "#6677e0" },
 	{ name: "Node.js", iconPath: mdiNodejs, color: "#61af43" },
 	{ name: "Mongo DB", iconPath: mdiLeaf, color: "#69a14a" },
 	{ name: "Express", iconPath: mdiPuzzleOutline, color: "#888888" },
