@@ -1,33 +1,30 @@
-import Navbar from "./components/navbar/Navbar";
-import {Footer} from "./components/sections/footer/Footer";
-import { Container } from "./components/utils/container";
+import Navbar from "../components/navbar/Navbar";
+import { Footer } from "../components/sections/footer/Footer";
+import { Container } from "../components/utils/container";
 import "./globals.css";
 import localFont from "next/font/local";
 
-
-
 const Satochi = localFont({
-  src: [
-    {
-      path: '../public/Fonts/Satoshi-Medium.ttf',
-      weight: '600'
-    },
-    {
-      path: '../public/Fonts/Satoshi-Regular.ttf',
-      weight: '400'
-    },
-    {
-      path: '../public/Fonts/Satoshi-Bold.ttf',
-      weight: '700'
-    },
-    {
-      path: '../public/Fonts/Satoshi-Black.ttf',
-      weight: '800'
-    }
-  ],
-  variable: '--font-Satochi'
-})
-
+	src: [
+		{
+			path: "../public/Fonts/Satoshi-Medium.ttf",
+			weight: "600",
+		},
+		{
+			path: "../public/Fonts/Satoshi-Regular.ttf",
+			weight: "400",
+		},
+		{
+			path: "../public/Fonts/Satoshi-Bold.ttf",
+			weight: "700",
+		},
+		{
+			path: "../public/Fonts/Satoshi-Black.ttf",
+			weight: "800",
+		},
+	],
+	variable: "--font-Satochi",
+});
 
 export const metadata = {
 	metadataBase: new URL("https://nextjs13-seo.vercel.app"),
@@ -42,7 +39,6 @@ export const metadata = {
 	// },
 };
 
-
 export default function RootLayout({
 	children,
 }: {
@@ -56,16 +52,13 @@ export default function RootLayout({
 			</head>
 
 			<body className={Satochi.className}>
-				<div >
+				<div>
 					<Navbar />
 					<main className="bg-hero-gradient pt-[var(--nav-height)]">
 						{children}
 					</main>
-					
-						
-							<Footer/>
-						
-					
+
+					<Footer />
 				</div>
 			</body>
 		</html>

@@ -1,15 +1,14 @@
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
-import { Container } from "./components/utils/container";
+import { Container } from "../components/utils/container";
 
-import { HeroPage } from "./components/sections/hero/HeroPage";
-import { ProjectPage } from "./components/sections/project/ProjectPage";
-import About from "./components/sections/about/About";
-import  SongBox  from "./components/sections/song/SongSlide";
-import { LastestBlog } from './components/sections/blog/LastestBlog';
-import { StarsIllustration } from "./components/utils/Stars";
+import { HeroPage } from "../components/sections/hero/HeroPage";
+import { ProjectPage } from "../components/sections/project/ProjectPage";
+import About from "../components/sections/about/About";
+import SongBox from "../components/sections/song/SongSlide";
+import { LastestBlog } from "../components/sections/blog/LastestBlog";
+import { StarsIllustration } from "../components/utils/Stars";
 import classNames from "classnames";
-
 
 export default function Home() {
 	return (
