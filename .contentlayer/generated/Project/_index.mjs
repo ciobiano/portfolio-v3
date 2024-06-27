@@ -5,6 +5,5 @@ import projects__finesseStoreMdx from './projects__finesse-store.mdx.json' asser
 import projects__ghostybotMdx from './projects__ghostybot.mdx.json' assert { type: 'json' }
 import projects__homeInventoryMdx from './projects__home-inventory.mdx.json' assert { type: 'json' }
 import projects__snailycadMdx from './projects__snailycad.mdx.json' assert { type: 'json' }
-import projects__finesseCmsMdx from './projects__finesse-cms.mdx.json' assert { type: 'json' }
 
-export const allProjects = [projects__earningTrackerMdx, projects__finesseStoreMdx, projects__ghostybotMdx, projects__homeInventoryMdx, projects__snailycadMdx, projects__finesseCmsMdx]
+export const allProjects = [projects__earningTrackerMdx, projects__finesseStoreMdx, projects__ghostybotMdx, projects__homeInventoryMdx, projects__snailycadMdx]
