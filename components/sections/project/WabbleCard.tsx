@@ -12,9 +12,9 @@ export function WobbleCardSection() {
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
 				<Link
 					href="/project/finesse-store"
-					className="cursor-pointer col-span-1 lg:col-span-2 h-full bg-[#510400]min-h-[500px] lg:min-h-[300px]  rounded-xl "
+					className="cursor-pointer col-span-1 lg:col-span-2 h-full bg-[#510400]min-h-[300px] lg:min-h-[300px]  rounded-xl "
 				>
-					<WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-[#510400] min-h-[400px] lg:min-h-[300px]">
+					<WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-[#510400] min-h-[300px] lg:min-h-[300px]">
 						<div className="max-w-xs">
 							<h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 								Finesse pharmaceutical store
@@ -29,7 +29,7 @@ export function WobbleCardSection() {
 							width={500}
 							height={500}
 							alt="finesse store"
-							className="absolute -right-4 lg:-right-[20%] -bottom-5 object-contain rounded-2xl"
+							className="absolute -right-4 lg:-right-[20%] -bottom-5 object-contain rounded-2xl hidden md:flex"
 						/>
 					</WobbleCard>
 				</Link>
