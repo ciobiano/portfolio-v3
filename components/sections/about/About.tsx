@@ -43,7 +43,7 @@ const About = () => {
 			<div className="flex flex-col text-gradient  gap-3 md:text-xl text-md font-medium">
 				<h1>
 					Merging Creativity and Code: <br  /> 
-					<span className="text-md ">
+					<span className="text-sm md:text-md ">
 						A Journey into Full-Stack
 					Development
 						</span>

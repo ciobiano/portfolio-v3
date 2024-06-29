@@ -14,7 +14,7 @@ export function WobbleCardSection() {
 					href="/project/finesse-store"
 					className="cursor-pointer col-span-1 lg:col-span-2 h-full bg-[#510400]min-h-[500px] lg:min-h-[300px]  rounded-xl "
 				>
-					<WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-[#510400] min-h-[500px] lg:min-h-[300px]">
+					<WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-[#510400] min-h-[400px] lg:min-h-[300px]">
 						<div className="max-w-xs">
 							<h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 								Finesse pharmaceutical store
@@ -35,9 +35,9 @@ export function WobbleCardSection() {
 				</Link>
 				<Link
 					href="/project/cms-system"
-					className="cursor-pointer col-span-1 min-h-[400px] bg-zinc-800 rounded-2xl "
+					className="cursor-pointer col-span-1 min-h-[300px] md:min-h-[400px] bg-zinc-800 rounded-2xl "
 				>
-					<WobbleCard containerClassName="col-span-1 min-h-[420px] bg-zinc-900">
+					<WobbleCard containerClassName="col-span-1 min-h-[300px] md:min-h-[400px] bg-zinc-900">
 						<h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 							Content management system
 						</h2>
@@ -49,9 +49,9 @@ export function WobbleCardSection() {
 				</Link>
 				<Link
 					href="/project/eterna-care"
-					className="cursor-pointer col-span-1 lg:col-span-3 bg-cyan-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px] rounded-2xl"
+					className="cursor-pointer col-span-1 lg:col-span-3 bg-cyan-900 min-h-[00px] lg:min-h-[600px] xl:min-h-[300px] rounded-2xl"
 				>
-					<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-cyan-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+					<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-cyan-900 min-h-[300px] lg:min-h-[600px] xl:min-h-[300px]">
 						<div className="max-w-sm">
 							<h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 								Eterna health care institution
@@ -66,7 +66,7 @@ export function WobbleCardSection() {
 							width={500}
 							height={500}
 							alt="linear demo image"
-							className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-5 object-contain rounded-2xl"
+							className="absolute -right-10 md:-right-[10%] lg:-right-[10%] -bottom-5 object-contain rounded-2xl hidden lg:flex "
 						/>
 					</WobbleCard>
 				</Link>
