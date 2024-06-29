@@ -49,7 +49,7 @@ export function WobbleCardSection() {
 				</Link>
 				<Link
 					href="/project/eterna-care"
-					className="cursor-pointer col-span-1 lg:col-span-3 bg-cyan-900 min-h-[00px] lg:min-h-[600px] xl:min-h-[300px] rounded-2xl"
+					className="cursor-pointer col-span-1 lg:col-span-3 bg-cyan-900 min-h-[300px] lg:min-h-[600px] xl:min-h-[300px] rounded-2xl"
 				>
 					<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-cyan-900 min-h-[300px] lg:min-h-[600px] xl:min-h-[300px]">
 						<div className="max-w-sm">
