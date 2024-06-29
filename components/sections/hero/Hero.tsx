@@ -40,7 +40,7 @@ export const HeroSubtitle = ({ children, className }: HeroElementProps) => {
 
 export const Hero = ({ children }: HeroProps) => {
 	return (
-		<div className=" relative text-start h-[55vh] md:min-w-[450px] md:justify-end justify-center gap-8 md:mt-24 mt-16 flex flex-col flex-nowrap">
+		<div className=" relative text-start h-[55vh] md:min-w-[450px] md:justify-end justify-center gap-8 md:mt-24 mt-10 flex flex-col flex-nowrap">
 			{children}
 		</div>
 	);
