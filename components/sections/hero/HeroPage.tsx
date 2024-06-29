@@ -11,7 +11,7 @@ export const HeroPage = () => {
 				animate={{ x: 0 , opacity: 1 }}
 				initial={{ x:-10, opacity: 0 }}
 				transition={{ ease: "easeOut"}}
-				className="text-sm flex  mt-10  items-center"
+				className="text-sm flex  items-center"
 			>
 				<Button href="/blog" variant="secondary" size="small">
 					<span> New post avaliable 🚨 </span>

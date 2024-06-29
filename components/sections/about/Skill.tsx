@@ -1,5 +1,5 @@
 import React from "react";
-import { skills } from "../../../data/skills";
+import { skills } from "../../../app/data/skills";
 import { Button } from "../../utils/Button";
 import Icon from "@mdi/react";
 

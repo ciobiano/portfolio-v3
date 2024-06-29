@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@/components/utils/container";
 import { AboutHeroSection } from "../../../components/about/hero-section";
 import { ExperienceSection } from "../../../components/about/experience";
-import { Work } from "../../../data/work";
+import { Work } from "../../data/work";
 import Skill from "../../../components/sections/about/Skill";
 
 type Props = {};

@@ -25,11 +25,11 @@ const About = () => {
 			y: 10,
 		},
 	};
-	 	useEffect(() => {
-			if (inView) {
-				controls.start("visible");
-			}
-		}, [controls, inView]);
+	useEffect(() => {
+		if (inView) {
+			controls.start("visible");
+		}
+	}, [controls, inView]);
 
 	return (
 		<motion.div
@@ -42,10 +42,14 @@ const About = () => {
 		>
 			<div className="flex flex-col text-gradient  gap-3 md:text-xl text-md font-medium">
 				<h1>
-					Merging Creativity and Code: <br /> An Artful Journey into Full-Stack
-					Development .
+					Merging Creativity and Code: <br  /> 
+					<span className="text-md ">
+						A Journey into Full-Stack
+					Development
+						</span>
+						
 				</h1>
-				<p className="flex text-sm ">
+				<p className="flex text-sm mt-4   ">
 					The integration of these two areas enables me to adopt a comprehensive
 					approach to growth. I take into account not just the technical
 					elements, but also the user experience, to ensure that the apps I
