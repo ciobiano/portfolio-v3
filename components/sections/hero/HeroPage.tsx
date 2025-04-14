@@ -38,7 +38,7 @@ export const HeroPage = () => {
 			>
 
 			<HeroTitle>
-				Bring Your Business & Idea Live 
+				Bring Your Business <br/> & Idea Live 
 			</HeroTitle>
 			</motion.div>
 		</Hero>
