@@ -26,7 +26,7 @@ export const HeroPage = () => {
 			>
 
 			<HeroSubtitle>
-				Building bridges between front and back, one line at a time, {""}from
+				I build bridges between front and back, one line at a time, {""}from
 				pixels to databases, I make it all connect.{" "}
 			</HeroSubtitle>
 			</motion.div>
@@ -38,7 +38,7 @@ export const HeroPage = () => {
 			>
 
 			<HeroTitle>
-				Connecting Imagination <br />& Reality
+				Bring Your Business & Idea Live 
 			</HeroTitle>
 			</motion.div>
 		</Hero>
