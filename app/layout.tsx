@@ -29,11 +29,11 @@ const Satochi = localFont({
 export const metadata = {
 	metadataBase: new URL("https://nextjs13-seo.vercel.app"),
 	title: {
-		default: "biano Ralph",
-		template: `%s | Obiano Ralph`,
+		default: "biano Raph",
+		template: `%s | Obiano Raph`,
 	},
 	description:
-		"This portfolio represents the work of Ralph Obiano, a designer and developer based in Lagos, Nigeria.",
+		"This portfolio represents the work of Raph Obiano, a designer and developer based in Lagos, Nigeria.",
 	// verification: {
 	// 	google: "google-site-verification=123123123",
 	// },

@@ -14,6 +14,7 @@ import {
 	mdiAccountGroupOutline,
 	mdiPaletteSwatchOutline,
 	mdiTailwind,
+	mdiDocker,
 	nextJs,
 } from "@/components/icons/mdi";
 
@@ -41,6 +42,7 @@ export const skills: Skill[] = [
 	{ name: "Mongo DB", iconPath: mdiLeaf, color: "#69a14a" },
 	{ name: "Express", iconPath: mdiPuzzleOutline, color: "#888888" },
 	{ name: "Git", iconPath: mdiGit, color: "#fc6d26" },
+	{ name: "Docker", iconPath: mdiDocker, color: "#2496ed" },
 	{ name: "Material Design", iconPath: mdiMaterialDesign, color: "#888888" },
 	{
 		name: "Community",

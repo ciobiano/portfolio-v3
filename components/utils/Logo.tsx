@@ -14,7 +14,7 @@ export const Logo = ({ className }: { className?: string }) => {
 				href="/"
 			>
 				<FaBullseye size={30} />
-				biano Ralph
+				biano Raph
 			</Link>
 		</div>
 	);

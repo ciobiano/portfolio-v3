@@ -33,6 +33,9 @@ export function ExperienceSection({ WorkRoles }: WorkRoleProps) {
 									<p className="text-zinc-400 text-xs flex-none ">
 										{role.title}
 									</p>
+									<p className="text-zinc-400 text-xs flex-none ">
+										{role.employmentType}
+									</p>
 								</div>
 
 								<div className="flex flex-col sm:flex-row sm:gap-4 justify-between w-full sm:max-w-fit">

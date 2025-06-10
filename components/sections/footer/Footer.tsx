@@ -15,19 +15,23 @@ const footerLinks = [
 	{
 		title: "Explore",
 		links: [
-			{ title: "About us", href: "#" },
-			{ title: "Projects", href: "#" },
-			{ title: "Careers", href: "#" },
-			{ title: "Contact", href: "#" },
+			{ title: "About Me", href: "/about" },
+			{ title: "Projects", href: "/projects" },
+			{ title: "Contact", href: "/contact" },
 		],
 	},
 	{
 		title: "Resources",
 		links: [
-			{ title: "Community", href: "#" },
-			{ title: "Books", href: "#" },
-			{ title: "Discord", href: "#" },
-			{ title: "Terms of service", href: "#" },
+			{ title: "Community", href: "" },
+			{
+				title: "Books",
+				href: "https://www.linkedin.com/in/raph-akpan-1b1b3b1b2/",
+			},
+			{
+				title: "Discord",
+				href: "https://www.linkedin.com/in/raph-akpan-1b1b3b1b2/",
+			},
 		],
 	},
 ];
@@ -36,16 +40,16 @@ const IconLink = [
 	{
 		iconPath: linkedInOutline,
 		color: "#0A66C2",
-		href: "https://www.linkedin.com/in/ralph-akpan-1b1b3b1b2/",
+		href: "https://www.linkedin.com/in/ciobiano/",
 	},
 	{
 		iconPath: twitterOutline,
 		color: "#1D9BF0",
-		href: "https://www.linkedin.com/in/ralph-akpan-1b1b3b1b2/",
+		href: "https://x.com/sire_raph",
 	},
 	{
 		iconPath: gitHubOutline,
-		href: "https://www.linkedin.com/in/ralph-akpan-1b1b3b1b2/",
+		href: "https://github.com/ciobiano",
 	},
 ];
 
