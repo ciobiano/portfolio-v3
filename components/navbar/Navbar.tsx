@@ -18,6 +18,16 @@ function Navbar() {
 		setIsMenuOpen(!isMenuOpen);
 	};
 
+	const handleResumeDownload = () => {
+		// Create a temporary link element to trigger download
+		const link = document.createElement("a");
+		link.href = "/CV-2.pdf";
+		link.download = "Obiano_Resume.pdf";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 	useEffect(() => {
 		const html = document.querySelector("html");
 		if (html) html.classList.toggle("overflow-hidden", isMenuOpen);
@@ -79,15 +89,25 @@ function Navbar() {
 							<li className="md:hidden">
 								<Link href="/">Contact Me </Link>
 							</li>
-							
+							<li className="md:hidden">
+								<button
+									onClick={handleResumeDownload}
+									className="flex h-navigation-height w-full translate-y-8 items-center text-sm transition-[color,transform] duration-300 ease-in hover:text-grey"
+								>
+									Resumé <MdOutlineFileDownload size={20} className="ml-2" />
+								</button>
+							</li>
 						</ul>
 					</nav>
 				</div>
 
 				<div className="items-center text-center md:flex hidden ">
-					<Button href="#" variant="primary" size="small">
+					<button
+						onClick={handleResumeDownload}
+						className="rounded-full inline-flex gap-2 items-center text-black-text bg-white hover:text-shadow hover:shadow-primary transition-[shadow,text-shadow] text-[16px] px-3 h-7"
+					>
 						Resumé <MdOutlineFileDownload size={20} />
-					</Button>
+					</button>
 				</div>
 
 				<div className=" md:hidden items-center flex z-10 ">

@@ -10,16 +10,17 @@ export function AboutHeroSection() {
 
 				<div className="max-w-xl text-sm font-medium ">
 					<p className="text-grey mt-10">
-						In my story, curiosity and coding mix. I was first intrigued to
-						front-end programming because of the immediate visual
-						feedback.However, I immediately realized that the key lay in
-						connecting the dots—from front to back. Now, apart from being
-						aesthetically pleasing, my web apps are scalable and reliable.
+						Experienced Software Engineer with over 5 years in the industry,
+						specializing in full-stack development, cloud technologies, and
+						artificial intelligence.
 					</p>
 					<p className="text-grey mt-5">
-						Whether you&apos;re an aspiring entrepreneur or a fellow developer, I
-						welcome partnerships, talks, and coffee dates. Reach out and let&apos;s
-						create something special.
+						Proficient in leveraging AI tools and frameworks to enhance system
+						performance, automate processes, and develop intelligent solutions.
+						Proven track record of improving system efficiency, collaborating on
+						successful projects, and continuously learning new skills, including
+						advanced AI techniques. Adept at working with cross-functional teams
+						to deliver high-quality, AI-driven solutions.
 					</p>
 				</div>
 			</div>
