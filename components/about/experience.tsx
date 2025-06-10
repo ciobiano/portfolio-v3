@@ -13,41 +13,106 @@ export function ExperienceSection({ WorkRoles }: WorkRoleProps) {
 					Work Experience
 				</h2>
 			</header>
-			<ul className="flex flex-col mt-5">
+			<div className="flex flex-col mt-8 space-y-8">
 				{WorkRoles.map((role, roleIndex) => {
 					const startDate = format(role.start, "MMM yyyy");
 					const endDate = role.end ? format(role.end, "MMM yyyy") : "Present";
 
 					return (
-						<li key={roleIndex} className="mt-5 overflow-hidden">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								className="group flex flex-col sm:flex-row justify-between w-full"
-								href={role.url}
-							>
-								<div>
-									<h3 className="font-semibold group-hover:underline text-sm ">
-										{role.company}
-									</h3>
-									<p className="text-zinc-400 text-xs flex-none ">
-										{role.title}
-									</p>
-									<p className="text-zinc-400 text-xs flex-none ">
-										{role.employmentType}
-									</p>
+						<div
+							key={roleIndex}
+							className="border border-zinc-700/40 rounded-lg p-6 bg-transparent-white"
+						>
+							<div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+								<div className="flex-1">
+									<a
+										target="_blank"
+										rel="noopener noreferrer"
+										href={role.url}
+										className="group"
+									>
+										<h3 className="text-lg font-semibold group-hover:underline text-zinc-100">
+											{role.company}
+										</h3>
+									</a>
+									<p className="text-md text-zinc-300 mt-1">{role.title}</p>
+									<div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-zinc-400 mt-2">
+										<span>{role.employmentType}</span>
+										<span>•</span>
+										<span>{role.location}</span>
+										<span>•</span>
+										<span>{role.locationType}</span>
+									</div>
 								</div>
+								<div className="text-sm text-zinc-400 mt-2 md:mt-0 md:text-right">
+									{startDate} - {endDate}
+								</div>
+							</div>
 
-								<div className="flex flex-col sm:flex-row sm:gap-4 justify-between w-full sm:max-w-fit">
-									<h4 className="text-zinc-400 mt-1 ">
-										{startDate} - {endDate}
+							{role.description && (
+								<p className="text-sm text-zinc-300 mb-4">{role.description}</p>
+							)}
+
+							{role.technologies && role.technologies.length > 0 && (
+								<div className="mb-4">
+									<h4 className="text-sm font-medium text-zinc-200 mb-2">
+										Technologies
 									</h4>
+									<div className="flex flex-wrap gap-2">
+										{role.technologies.map((tech, index) => (
+											<span
+												key={index}
+												className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-zinc-800 text-zinc-300 border border-zinc-700"
+											>
+												{tech}
+											</span>
+										))}
+									</div>
 								</div>
-							</a>
-						</li>
+							)}
+
+							{role.achievements && role.achievements.length > 0 && (
+								<div className="mb-4">
+									<h4 className="text-sm font-medium text-zinc-200 mb-2">
+										Key Achievements
+									</h4>
+									<ul className="space-y-1">
+										{role.achievements.map((achievement, index) => (
+											<li
+												key={index}
+												className="text-sm text-zinc-300 flex items-start"
+											>
+												<span className="text-green-400 mr-2 mt-1">•</span>
+												{achievement}
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
+
+							{role.keyResponsibilities &&
+								role.keyResponsibilities.length > 0 && (
+									<div>
+										<h4 className="text-sm font-medium text-zinc-200 mb-2">
+											Key Responsibilities
+										</h4>
+										<ul className="space-y-1">
+											{role.keyResponsibilities.map((responsibility, index) => (
+												<li
+													key={index}
+													className="text-sm text-zinc-400 flex items-start"
+												>
+													<span className="text-zinc-500 mr-2 mt-1">•</span>
+													{responsibility}
+												</li>
+											))}
+										</ul>
+									</div>
+								)}
+						</div>
 					);
 				})}
-			</ul>
+			</div>
 		</section>
 	);
 }

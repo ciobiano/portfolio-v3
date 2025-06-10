@@ -16,8 +16,6 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 			</h2>
 			<ol className="mt-6 space-y-4">
 				{WorkRoles.map((role, roleIndex) => {
-
-					
 					const startDate = format(role.start, "MMM yyyy");
 					const endDate = role.end ? format(role.end, "MMM yyyy") : "Present";
 
@@ -30,13 +28,14 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 									className="h-7 w-7 rounded-full object-cover"
 								/>
 							</div>
-							<dl className="flex flex-auto flex-wrap gap-x-2">
-								<dt className="sr-only">Company</dt>
-								<dd className=" flex-wrap  font-bold text-zinc-100">
-									{role.company}
-								</dd>
-								<dt className="sr-only">Date</dt>
-								<dd
+							<dl className="flex flex-auto flex-col gap-y-1">
+								<div className="flex flex-wrap gap-x-2 items-center">
+									<dt className="sr-only">Company</dt>
+									<dd className="font-bold text-zinc-100 text-sm">
+										{role.company}
+									</dd>
+									<dt className="sr-only">Date</dt>
+									<dd
 									className="md:ml-auto text-xs text-zinc-400 dark:text-zinc-400"
 									aria-label={`${startDate} until ${endDate}`}
 								>
@@ -44,8 +43,10 @@ export function Resume({ WorkRoles }: WorkRoleProps) {
 									<span aria-hidden="true">—</span>{" "}
 									<time dateTime={endDate}>{endDate}</time>
 								</dd>
+								</div>
+								
 								<dt className="sr-only">Role</dt>
-								<dd className="w-full text-xs text-zinc-500 dark:text-zinc-400">
+								<dd className="text-xs text-zinc-500">
 									{role.title}
 								</dd>
 							</dl>
