@@ -6,8 +6,6 @@
 @import url("https://api.fontshare.com/v2/css?f[]=kola@400&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap");
 
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,19 +14,64 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-@layer base{
-
-    :root{
+@layer base {
+    :root {
         --nav-height: 4.8rem;
         font-family: var(--Satochi-Regular);
     }
-    html{
-      
+    
+    html {
         @apply bg-background text-white;
-       
+        /* Improve touch scrolling on iOS */
+        -webkit-overflow-scrolling: touch;
+        /* Prevent horizontal scroll on mobile */
+        overflow-x: hidden;
     }
-    li{
+    
+    body {
+        /* Prevent horizontal scroll */
+        overflow-x: hidden;
+        /* Improve touch scrolling */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    li {
         list-style: none;
+    }
+    
+    /* Better touch targets for mobile */
+    button, 
+    [role="button"], 
+    input[type="button"], 
+    input[type="submit"], 
+    a {
+        /* Minimum touch target size for accessibility */
+        min-height: 44px;
+        /* Better touch interaction */
+        touch-action: manipulation;
+    }
+    
+    /* Improve form inputs on mobile */
+    input, 
+    textarea, 
+    select {
+        /* Prevent zoom on iOS */
+        font-size: 16px;
+        /* Better touch targets */
+        min-height: 44px;
+    }
+    
+    @media (max-width: 768px) {
+        /* Reduce motion for mobile users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *, 
+            *::before, 
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     }
 }
 
@@ -36,12 +79,35 @@
     font-size: 20px;
     font-family: var(--DancingScript-Bold);
 }
-  .text-gradient {
-      background: linear-gradient(to right bottom, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0.38));
-      background-clip: text;
-      color: transparent;
-  }
 
-    .mask-radial-faded {
+.text-gradient {
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0.38));
+    background-clip: text;
+    color: transparent;
+}
+
+.mask-radial-faded {
     mask-image: radial-gradient(circle at center center, black, transparent 80%)
-  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    /* Improve readability on small screens */
+    .text-gradient {
+        background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.5));
+        background-clip: text;
+        color: transparent;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Prevent layout shifts */
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+}

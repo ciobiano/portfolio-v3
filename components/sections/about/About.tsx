@@ -11,7 +11,7 @@ import { Work } from "@/app/data/work";
 
 const About = () => {
 	const [ref, inView] = useInView({
-		threshold: 0.3,
+		threshold: 0.2,
 		triggerOnce: true,
 	});
 
@@ -25,7 +25,7 @@ const About = () => {
 			y: 0,
 			transition: {
 				duration: 0.8,
-				ease: [0.25, 0.1, 0.25, 1], // Custom cubic-bezier for smooth easing
+				ease: [0.25, 0.1, 0.25, 1],
 				staggerChildren: 0.15,
 			},
 		},
@@ -84,35 +84,40 @@ const About = () => {
 			initial="hidden"
 			variants={containerVariants}
 			ref={ref}
-			className="mx-auto  items-start mt-[5rem] md:mt-[10rem]  max-w-[1215px]  md:grid-cols-2 grid gap-10  justify-between"
+			className="mx-auto px-4 sm:px-6 items-start mt-16 sm:mt-20 md:mt-[10rem] max-w-[1215px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 justify-between"
 		>
 			<motion.div
 				variants={childVariants}
-				className="flex flex-col text-gradient  gap-3 md:text-xl text-md font-medium"
+				className="flex flex-col text-gradient gap-4 text-base sm:text-lg md:text-xl font-medium order-2 lg:order-1"
 			>
-				<motion.h1 variants={childVariants}>
+				<motion.h1
+					variants={childVariants}
+					className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight"
+				>
 					Merging Creativity and Code: <br />
-					<span className="text-sm md:text-md ">
+					<span className="text-sm sm:text-base md:text-lg text-zinc-400">
 						A Journey into Full-Stack Development
 					</span>
 				</motion.h1>
-				<motion.p variants={childVariants} className="flex text-sm mt-4   ">
+				<motion.p
+					variants={childVariants}
+					className="text-sm sm:text-base md:text-lg mt-4 leading-relaxed max-w-2xl"
+				>
 					The integration of these two areas enables me to adopt a comprehensive
 					approach to growth. I take into account not just the technical
 					elements, but also the user experience, to ensure that the apps I
 					design are both functionally powerful and visually beautiful.
 				</motion.p>
-				<motion.div variants={childVariants} className="mt-10 ">
+				<motion.div variants={childVariants} className="mt-8 lg:mt-10">
 					<Skill />
 				</motion.div>
-				{/* <span className="border border-white md:w-[1215px] "></span> */}
 			</motion.div>
 
 			<motion.div
 				animate={resumeControls}
 				variants={resumeVariants}
 				initial="hidden"
-				className="grid justify-between ml-auto  md:grid-cols-1 "
+				className="flex justify-center lg:justify-end order-1 lg:order-2"
 			>
 				<Resume WorkRoles={Work} />
 			</motion.div>
